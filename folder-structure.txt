@@ -1,0 +1,26 @@
+dance-stage-na/
+│
+├── index.html
+├── about.html
+├── calendar.html
+│
+├── css/
+│   └── styles.css
+│
+├── js/
+│   └── script.js
+│
+├── data/
+│   └── events.json
+│
+├── images/
+│   ├── breaking-jam.jpg
+│   ├── west-coast.jpg
+│   ├── power-moves.jpg
+│   └── rhythm-nation.jpg
+│
+└── events/
+    ├── breaking-jam-2025.html
+    ├── west-coast-freestyle.html
+    ├── power-moves-toronto.html
+    └── rhythm-nation.html

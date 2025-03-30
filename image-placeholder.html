@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder Image Creator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .placeholder {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+        }
+        .icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+        .text {
+            font-size: 18px;
+            color: #999;
+            text-align: center;
+        }
+        .info {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="placeholder">
+            <div class="icon">📷</div>
+            <div class="text">No Image Available</div>
+        </div>
+        
+        <div class="info">
+            <p>To create a placeholder image for your site:</p>
+            <ol>
+                <li>Take a screenshot of this placeholder</li>
+                <li>Save it as <code>no-image.jpg</code> in your <code>images</code> folder</li>
+                <li>The website will automatically show this placeholder when event images are missing</li>
+            </ol>
+            <p>For event images, save them with the names specified in your <code>events.json</code> file (like <code>breaking-jam.jpg</code>, <code>west-coast.jpg</code>, etc.)</p>
+        </div>
+    </div>
+</body>
+</html>

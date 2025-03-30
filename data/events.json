@@ -1,0 +1,76 @@
+{
+  "events": [
+    {
+      "id": "rnb-preparty",
+      "title": "R&B PREPARTY",
+      "location": {
+        "city": "Seattle",
+        "state": "WA",
+        "venue": "Octopus Bar",
+        "address": "2121 N. 45th St."
+      },
+      "date": "2025-05-02",
+      "startTime": "20:00",
+      "endTime": "01:00",
+      "image": "rnb-preparty.jpg",
+      "externalLink": "https://instagram.com/springbreakbattle",
+      "categories": ["All Styles"],
+      "organizer": "Spring Break Battle (@springbreakbattle)",
+      "description": "To kick off the Spring Break Battle weekend, we're hosting an all-R&B affair! From battles to cyphers, it's going to be an absolute vibe.\n\nThis 2vs2 open styles competition features an impressive panel of judges and a cash prize for the winners. Be sure to come on time to catch all the action!\n\nJudges: MT Pop, Zenta, Complex\nDJ: MagicSean\nMC: Auggie\n\nEntry: $25 to battle (spectators free)\nPrize: $400\n\nNote: This is a 21+ event"
+    },
+    {
+      "id": "3vs3-open-styles",
+      "title": "SPRING BREAK BATTLE: 3VS3 OPEN STYLES",
+      "location": {
+        "city": "Seattle",
+        "state": "WA",
+        "venue": "OM Culture",
+        "address": "2210 N Pacific St."
+      },
+      "date": "2025-05-03",
+      "startTime": "14:00",
+      "endTime": "22:00",
+      "image": "3vs3-open-styles.jpg",
+      "externalLink": "https://instagram.com/springbreakbattle",
+      "categories": ["All Styles"],
+      "organizer": "Spring Break Battle (@springbreakbattle)",
+      "description": "The 3vs3 Open Styles bracket is back for its fourth consecutive year! Get excited and start forming those teams for this highly anticipated competition.\n\nFeaturing world-class judges, professional DJs, and even a special guest battle team. This is the main event of the Spring Break Battle weekend that you won't want to miss.\n\nJudges: Storm, Hurrikane, Waackxxxy\nDJs: MagicSean & Tinman\nMC: Jake Finesse\nGuest Battle Team: MT Pop, Zenta, Complex\n\nEntry: $30\nPrize: $1,200"
+    },
+    {
+      "id": "spring-breakin-battle",
+      "title": "SPRING BREAKIN BATTLE",
+      "location": {
+        "city": "Seattle",
+        "state": "WA",
+        "venue": "Russian Community Center",
+        "address": "704 19th Ave E"
+      },
+      "date": "2025-05-04",
+      "startTime": "14:00",
+      "endTime": "22:00",
+      "image": "spring-breakin.jpg",
+      "externalLink": "https://instagram.com/springbreakbattle",
+      "categories": ["Breaking"],
+      "organizer": "Spring Break Battle (@springbreakbattle)",
+      "description": "Spring Break Battle presents Spring Breakin Battle! This exciting crew vs crew breaking competition brings together teams of 3-7 members to battle for glory and a substantial cash prize.\n\nFeaturing legendary judges from the breaking scene and professional DJ and MC to keep the energy high throughout the event.\n\nJudges: Storm, Poe One, Complex\nDJ: FooJin\nMC: Jake Finesse\n\nEntry: $25 per person (includes spectators and battlers)\nPrize: $1,500"
+    },
+    {
+      "id": "break-fluid-jam",
+      "title": "BREAK FLUID JAM: VANCOUVER EDITION",
+      "location": {
+        "city": "Burnaby",
+        "state": "BC",
+        "venue": "The Rec Room Brentwood",
+        "address": "1920 Willingdon Avenue"
+      },
+      "date": "2025-05-03",
+      "startTime": "12:00",
+      "endTime": "22:00",
+      "image": "break-fluid-jam.jpg",
+      "externalLink": "https://instagram.com/dj.jaylo",
+      "categories": ["Breaking"],
+      "organizer": "Yaks & Jaylo (@dj.jaylo, @yakss.85)",
+      "description": "Yaks & Jaylo present Break Fluid Jam Vancouver Edition! This major breaking event features multiple battle categories with impressive prize pools.\n\nThe event includes:\n- 2vs2 battle for $2,000 CAD\n- 1vs1 bgirl battle for $650 CAD and a trip to @fssworldwide (4 invites, 4 open slots)\n- 7 to Smoke kids battle for $500 CAD\n- Exhibition battle: @machphive vs @straycurt\n\nHosted by: @thedamnnerdking & @switchbfam\n\nDJs: @yakss.85, @djfleg, @dj.jaylo\n\nJudges vary by category and include @philsvir, @bounce_s.r, @elijahsxc, @jazze2fresh, @machphive, and @straycurt\n\nA Friday night rocking workshop by @kitchyrock will be presented by @outlawrock_danceforum"
+    }
+  ]
+}

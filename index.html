@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDC - Street Dance Calendar</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/include.js"></script>
+</head>
+<body>
+    <!-- Include header -->
+    <div data-include="includes/header.html"></div>
+
+    <main id="events-container">
+        <!-- Events will be loaded dynamically from data/events.json -->
+    </main>
+
+    <!-- Include footer -->
+    <div data-include="includes/footer.html"></div>
+
+    <script>
+        // Fetch and load events data
+        fetch('data/events.json')
+            .then(response => response.json())
+            .then(data => {
+                const eventsContainer = document.getElementById('events-container');
+                const eventsGrid = document.createElement('section');
+                eventsGrid.className = 'events-grid';
+                
+                data.events.forEach(event => {
+                    const eventCard = document.createElement('article');
+                    eventCard.className = 'event-card';
+                    
+                    // Create category badges
+                    let categoryBadges = '';
+                    if (event.categories && event.categories.length > 0) {
+                        categoryBadges = event.categories.map(cat => 
+                            `<span class="category-badge">${cat}</span>`
+                        ).join('');
+                    }
+                    
+                    eventCard.innerHTML = `
+                        <a href="event.html?id=${event.id}">
+                            <div class="event-image">
+                                <img src="images/${event.image}" alt="${event.title}" onerror="this.src='images/no-image.jpg';">
+                            </div>
+                            <div class="event-info">
+                                <h2>${event.title}</h2>
+                                <p class="location">${event.location.city}, ${event.location.state}</p>
+                                <p class="date">${formatDate(event.date)} ${event.startTime || ''}${event.startTime ? '~' : ''}</p>
+                                <div class="category-badges">
+                                    ${categoryBadges}
+                                </div>
+                            </div>
+                        </a>
+                    `;
+                    
+                    eventsGrid.appendChild(eventCard);
+                });
+                
+                eventsContainer.appendChild(eventsGrid);
+            })
+            .catch(error => {
+                console.error('Error loading events data:', error);
+                document.getElementById('events-container').innerHTML = '<p class="error">Error loading events. Please try again later.</p>';
+            });
+            
+        // Helper function to format date
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, '0')}.${String(date.getDate()).padStart(2, '0')}`;
+        }
+    </script>
+</body>
+</html>
