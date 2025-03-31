@@ -40,18 +40,36 @@
                         ).join('');
                     }
                     
+                    // Format date for display
+                    const formattedDate = formatDate(event.date);
+                    
+                    // First category for mobile display
+                    const firstCategory = event.categories && event.categories.length > 0 ? 
+                        `<span class="category-badge">${event.categories[0]}</span>` : '';
+                    
                     eventCard.innerHTML = `
                         <a href="event.html?id=${event.id}">
                             <div class="event-image">
                                 <img src="images/${event.image}" alt="${event.title}" onerror="this.src='images/no-image.jpg';">
                             </div>
+                            
+                            <!-- Desktop hover info -->
                             <div class="event-info">
                                 <h2>${event.title}</h2>
                                 <p class="location">${event.location.city}, ${event.location.state}</p>
-                                <p class="date">${formatDate(event.date)} ${event.startTime || ''}${event.startTime ? '~' : ''}</p>
+                                <p class="date">${formattedDate} ${event.startTime || ''}${event.startTime ? '~' : ''}</p>
                                 <div class="category-badges">
                                     ${categoryBadges}
                                 </div>
+                            </div>
+                            
+                            <!-- Mobile always-visible info -->
+                            <div class="event-info-mobile">
+                                <div class="mobile-details">
+                                    <p class="mobile-location">${event.location.city}</p>
+                                    <p class="mobile-date">${formattedDate.split(' ')[0]}</p>
+                                </div>
+                                ${firstCategory}
                             </div>
                         </a>
                     `;
