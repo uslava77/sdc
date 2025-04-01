@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="js/include.js"></script>
+    <!-- Add the date utilities script -->
+    <script src="js/date-utils.js"></script>
 </head>
 <body>
     <!-- Include header -->
@@ -169,7 +171,7 @@
             
             // Get events for this month
             const monthEvents = events.filter(event => {
-                const eventDate = new Date(event.date);
+                const eventDate = parseDate(event.date);
                 return eventDate.getFullYear() === year && eventDate.getMonth() === month;
             });
             
@@ -183,12 +185,8 @@
                         calendarHTML += '<td></td>';
                     } else {
                         // Format date string for filtering events
-                        const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-                        const formatDate = new Date(dateStr).toLocaleDateString('en-US', { 
-                            year: 'numeric', 
-                            month: 'long', 
-                            day: 'numeric' 
-                        });
+                        const dateStr = createDateString(year, month + 1, day);
+                        const formatDate = formatDateLong(dateStr);
                         
                         // Check for events on this day
                         const dayEvents = monthEvents.filter(event => event.date === dateStr);

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="js/include.js"></script>
+    <!-- Add the date utilities script -->
+    <script src="js/date-utils.js"></script>
 </head>
 <body>
     <!-- Include header -->
@@ -113,25 +115,7 @@
                 });
         }
         
-        // Helper functions
-        function formatDateLong(dateString) {
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            return new Date(dateString).toLocaleDateString('en-US', options);
-        }
-        
-        function formatTime(timeString) {
-            if (!timeString) return '';
-            
-            const [hours, minutes] = timeString.split(':');
-            let hour = parseInt(hours);
-            const period = hour >= 12 ? 'PM' : 'AM';
-            
-            if (hour > 12) hour -= 12;
-            if (hour === 0) hour = 12;
-            
-            return `${hour}:${minutes} ${period}`;
-        }
-        
+        // Helper function for formatting description (kept local as it's specific to this page)
         function formatDescription(description) {
             if (!description) return '<p>No description available.</p>';
             
