@@ -30,7 +30,11 @@
                 const eventsGrid = document.createElement('section');
                 eventsGrid.className = 'events-grid';
                 
-                data.events.forEach(event => {
+                // Reverse the array to display newest events first
+                // (assuming newest events are added to the bottom of events.json)
+                const reversedEvents = [...data.events].reverse();
+                
+                reversedEvents.forEach(event => {
                     const eventCard = document.createElement('article');
                     eventCard.className = 'event-card';
                     
