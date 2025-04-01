@@ -47,9 +47,11 @@
         const modalDate = document.querySelector('#modal-date span');
         const modalEventsList = document.getElementById('modal-events-list');
         
+        // Move events variable to global scope so it's accessible to all functions
+        let events = [];
+        
         document.addEventListener('DOMContentLoaded', function() {
             let currentDate = new Date();
-            let events = [];
             
             // Close modal when clicking X
             modalClose.addEventListener('click', () => {
@@ -172,7 +174,7 @@
             // Get events for this month
             const monthEvents = events.filter(event => {
                 const eventDate = parseDate(event.date);
-                return eventDate.getFullYear() === year && eventDate.getMonth() === month;
+                return eventDate && eventDate.getFullYear() === year && eventDate.getMonth() === month;
             });
             
             // Create calendar grid
