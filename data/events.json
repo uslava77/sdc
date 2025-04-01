@@ -103,6 +103,7 @@
       "startTime": "13:00",
       "endTime": "20:00",
       "image": "draft-wars.jpg",
+      "externalLink": "https://www.instagram.com/p/DHPKD-MyU2E/",
       "categories": ["Breaking"],
       "organizer": "Community Event (@dj.jaylo, @yakss.85, @switchbfam)",
       "description": "DRAFT WARS brings a unique Pro-Am Draft 4v4 battle format (2 Adults, 2 Youth), where youth must be 17 and under. This community-focused event aims to bring together dancers of all ages.\n\nFeaturing professional judges, DJs, and a $1,000 cash prize for the winners.\n\nJudges: @bboybowzee, @puzzlesroc, @yakss.85\nDJs: @flipout, @dj.jaylo\nMC: @switchbfam\n\nSponsored by: @slowjamsundays, @goldenvalleyeggs, @diptvancity, @tabletutors\n\nTickets: $20 at the door"
@@ -120,7 +121,8 @@
       "startTime": "13:00",
       "endTime": "20:00",
       "image": "just-4-kicks.jpg",
-      "categories": ["Breaking", "All Styles"],
+      "externalLink": "https://www.instagram.com/p/DH5EKzlxlms",
+      "categories": ["Breaking"],
       "organizer": "Floorstorm Crew",
       "description": "After 11 years, it's back! Floorstorm Crew Presents: Just 4 Kicks All VS All Crew battle!\n\nThis unique format has each crew battling each other once - no judges, no winners, no losers, just battling for rep!\n\nDJs:\n- @fnkybndt\n- @trickytroublez\n- @dj_ice_b\n\nThe 8 crews battling are:\n- @hoodzcrew\n- @binnez_as_usual\n- @hooligunzz\n- @nss_breakers\n- @doomshotbreakerz\n- @packofbanditz\n- #FoolsCrew\n- #BCBuds\n\nAdmission: $15"
     },
@@ -128,17 +130,17 @@
       "id": "end-of-term-battle",
       "title": "END OF TERM BATTLE - WINTER EDITION",
       "location": {
-        "city": "Unknown",
-        "state": "",
-        "venue": "TBD",
-        "address": ""
+        "city": "Seattle",
+        "state": "WA",
+        "venue": "The Beacon",
+        "address": "812 Rainier Ave S"
       },
       "date": "2025-04-12",
       "startTime": "16:00",
       "endTime": "21:00",
       "image": "end-of-term-battle.jpg",
       "categories": ["House", "Waacking", "Breaking", "Locking"],
-      "organizer": "ORB & FREE",
+      "organizer": "@thebeaconmm",
       "description": "Closing out the term with BIG energy—battles, workshops, and community vibes all packed into one weekend!\n\nThis multi-style battle features four categories:\n- House (25 slots)\n- Wh/Aacking (25 slots)\n- Breaking (15 slots)\n- NEW! Locking (15 slots)\n\nJudges:\n- House: @comrade_psilo\n- Wh/Aacking: @simziez (Vancouver, BC)\n- Breaking: @lunatic_unl\n- Locking: @sbz_joshua (@lzb_locking)\n\nHosted by ORB & FREE\nDJ: MAC TRAY\n\nTo be mindful of time, there will be a cap for signups, so arrive early to secure your spot for the prelims.\n\nEntry: $7 online sign-ups | $5-15 sliding scale at the door\n\nPlus: END OF TERM WORKSHOP WITH SIMRAN on Sunday, April 13th, 1-3 PM ($20 Members | $30 Non-Members)"
     },
     {
@@ -148,7 +150,7 @@
         "city": "Seattle",
         "state": "WA",
         "venue": "Neptune Theatre (Main Event)",
-        "address": ""
+        "address": "1303 NE 45th St"
       },
       "date": "2025-05-25",
       "startTime": "17:00",
