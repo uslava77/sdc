@@ -25,6 +25,14 @@
                 <!-- Calendar will be dynamically generated here -->
                 <div class="loading">Loading calendar...</div>
             </div>
+            
+            <!-- Mobile List View -->
+            <section class="calendar-list-view">
+                <ul class="month-events-list" id="month-events-list">
+                    <!-- Events will be dynamically loaded here -->
+                    <div class="loading">Loading calendar events...</div>
+                </ul>
+            </section>
         </section>
     </main>
 
@@ -75,6 +83,7 @@
                 .catch(error => {
                     console.error('Error loading events data:', error);
                     document.getElementById('calendar-container').innerHTML = '<p class="error">Error loading calendar. Please try again later.</p>';
+                    document.getElementById('month-events-list').innerHTML = '<p class="error">Error loading events. Please try again later.</p>';
                 });
             
             // Event listeners for navigation
@@ -240,6 +249,92 @@
                     showDayEvents(dateStr, dateFormatted);
                 });
             });
+            
+            // Render the mobile list view
+            renderMobileListView(year, month, events);
+        }
+        
+        // New function to render the mobile list view
+        function renderMobileListView(year, month, allEvents) {
+            const monthEventsListEl = document.getElementById('month-events-list');
+            
+            // Get events for this month and sort by date
+            const monthEvents = allEvents.filter(event => {
+                const eventDate = parseDate(event.date);
+                return eventDate && eventDate.getFullYear() === year && eventDate.getMonth() === month;
+            }).sort((a, b) => {
+                return parseDate(a.date) - parseDate(b.date);
+            });
+            
+            // If no events this month
+            if (monthEvents.length === 0) {
+                monthEventsListEl.innerHTML = '<p>No events scheduled this month.</p>';
+                return;
+            }
+            
+            // Group events by day
+            const eventsByDay = {};
+            monthEvents.forEach(event => {
+                if (!eventsByDay[event.date]) {
+                    eventsByDay[event.date] = [];
+                }
+                eventsByDay[event.date].push(event);
+            });
+            
+            // Generate HTML for the list view
+            let listViewHTML = '';
+            
+            // Convert object to array of [date, events] pairs and sort by date
+            Object.entries(eventsByDay)
+                .sort(([dateA], [dateB]) => new Date(dateA) - new Date(dateB))
+                .forEach(([dateStr, dayEvents]) => {
+                    const formattedDate = formatDateLong(dateStr);
+                    
+                    listViewHTML += `
+                        <li class="day-events-list">
+                            <div class="date-header">${formattedDate}</div>
+                            <div class="events-list">
+                    `;
+                    
+                    dayEvents.forEach(event => {
+                        // Create time display if available
+                        let timeDisplay = '';
+                        if (event.startTime) {
+                            timeDisplay = formatTime(event.startTime);
+                            if (event.endTime) {
+                                timeDisplay += ` - ${formatTime(event.endTime)}`;
+                            }
+                        }
+                        
+                        // Create category badges
+                        let categoryBadges = '';
+                        if (event.categories && event.categories.length > 0) {
+                            categoryBadges = event.categories.map(cat => 
+                                `<span class="category-badge">${cat}</span>`
+                            ).join('');
+                        }
+                        
+                        listViewHTML += `
+                            <div class="list-event-item">
+                                <a href="event.html?id=${event.id}">${event.title}</a>
+                                <div class="event-meta">
+                                    <span>${event.location.city}, ${event.location.state}</span>
+                                    ${timeDisplay ? `<span> • ${timeDisplay}</span>` : ''}
+                                </div>
+                                <div class="category-badges">
+                                    ${categoryBadges}
+                                </div>
+                            </div>
+                        `;
+                    });
+                    
+                    listViewHTML += `
+                            </div>
+                        </li>
+                    `;
+                });
+            
+            monthEventsListEl.innerHTML = listViewHTML;
         }
     </script>
 </body>
