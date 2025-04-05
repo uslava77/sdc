@@ -90,6 +90,13 @@
                                         <p>${event.organizer}</p>
                                     </div>
                                     ` : ''}
+
+                                    ${event.flyerArtist ? `
+                                    <div class="info-block">
+                                        <h3><i class="fas fa-user"></i> Flyer Artist</h3>
+                                        <p>${event.flyerArtist}</p>
+                                    </div>
+                                    ` : ''}
                                     
                                     ${event.externalLink ? `
                                     <div class="info-block">
