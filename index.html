@@ -14,81 +14,543 @@
     <!-- Include header -->
     <div data-include="includes/header.html"></div>
 
-    <main id="events-container">
-        <!-- Events will be loaded dynamically from data/events.json -->
+    <main>
+        <!-- Event controls section -->
+        <section class="event-controls">
+            <!-- Toggle switches -->
+            <div class="toggle-container">
+                <!-- Time toggle (Upcoming/Past) -->
+                <div class="toggle-group">
+                    <button class="toggle-button active" id="upcoming-toggle">
+                        <i class="fas fa-calendar-day"></i> Upcoming
+                    </button>
+                    <button class="toggle-button" id="past-toggle">
+                        <i class="fas fa-calendar-check"></i> Past
+                    </button>
+                </div>
+                
+                <!-- View toggle (Grid/List) -->
+                <div class="toggle-group">
+                    <button class="toggle-button active" id="grid-view-btn">
+                        <i class="fas fa-th"></i> Grid
+                    </button>
+                    <button class="toggle-button" id="list-view-btn">
+                        <i class="fas fa-list"></i> List
+                    </button>
+                </div>
+                
+                <!-- Filter button -->
+                <button class="filter-btn" id="filter-btn">
+                    <i class="fas fa-sliders-h"></i> Filters
+                </button>
+            </div>
+            
+            <!-- Filters panel (hidden by default) -->
+            <div class="filters-panel" id="filters-panel">
+                <!-- Sort control and Categories inline -->
+                <div class="filters-row">
+                    <h3>Sort By:</h3>
+                    <div class="sort-control dropdown" id="sort-dropdown">
+                        <div class="dropdown-select" id="sort-dropdown-select">
+                            <span>Event Date (Soonest First)</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="dropdown-menu" id="sort-dropdown-menu">
+                            <div class="sort-item selected" data-value="date-asc">Event Date (Soonest First)</div>
+                            <div class="sort-item" data-value="date-desc">Event Date (Latest First)</div>
+                            <div class="sort-item" data-value="added-desc">Recently Added</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Categories multi-select dropdown -->
+                <div class="filter-control">
+                    <div class="filters-row">
+                        <h3>Categories:</h3>
+                        <div class="dropdown" id="categories-dropdown">
+                            <div class="dropdown-select" id="categories-dropdown-select">
+                                <span>All Categories</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="dropdown-menu" id="categories-dropdown-menu">
+                                <!-- Will be populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Clear filters button -->
+                <button id="clear-filters" class="clear-filters">Clear all filters</button>
+            </div>
+        </section>
+
+        <!-- Events content container -->
+        <div id="events-container">
+            <!-- Grid view -->
+            <section id="events-grid" class="events-grid">
+                <!-- Events will be loaded dynamically -->
+            </section>
+
+            <!-- List view -->
+            <section id="events-list" class="events-list">
+                <!-- Events will be loaded dynamically -->
+            </section>
+        </div>
     </main>
 
     <!-- Include footer -->
     <div data-include="includes/footer.html"></div>
 
     <script>
-        // Fetch and load events data
-        fetch('data/events.json')
-            .then(response => response.json())
-            .then(data => {
-                const eventsContainer = document.getElementById('events-container');
-                const eventsGrid = document.createElement('section');
-                eventsGrid.className = 'events-grid';
-                
-                // Reverse the array to display newest events first
-                // (assuming newest events are added to the bottom of events.json)
-                const reversedEvents = [...data.events].reverse();
-                
-                reversedEvents.forEach(event => {
-                    const eventCard = document.createElement('article');
-                    eventCard.className = 'event-card';
+        // Global variables
+        let allEvents = [];
+        let filteredEvents = [];
+        let activeCategories = [];
+        let currentSort = 'date-asc'; // Default to soonest first
+        let currentView = 'grid';
+        let timeFilter = 'upcoming'; // 'upcoming' or 'past'
+        
+        // Today's date for upcoming/past filtering
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Set to beginning of the day
+        
+        // DOM elements
+        const sortDropdown = document.getElementById('sort-dropdown');
+        const sortDropdownSelect = document.getElementById('sort-dropdown-select');
+        const sortDropdownMenu = document.getElementById('sort-dropdown-menu');
+        const sortItems = sortDropdownMenu.querySelectorAll('.sort-item');
+        
+        const categoriesDropdown = document.getElementById('categories-dropdown');
+        const categoriesDropdownSelect = document.getElementById('categories-dropdown-select');
+        const categoriesDropdownMenu = document.getElementById('categories-dropdown-menu');
+        
+        const gridViewBtn = document.getElementById('grid-view-btn');
+        const listViewBtn = document.getElementById('list-view-btn');
+        const upcomingToggle = document.getElementById('upcoming-toggle');
+        const pastToggle = document.getElementById('past-toggle');
+        const filterBtn = document.getElementById('filter-btn');
+        const filtersPanel = document.getElementById('filters-panel');
+        const clearFiltersBtn = document.getElementById('clear-filters');
+        
+        const eventsGrid = document.getElementById('events-grid');
+        const eventsList = document.getElementById('events-list');
+
+        // Fetch and process events data
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize dropdowns
+            initializeDropdowns();
+            
+            fetch('data/events.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Store all events
+                    allEvents = data.events;
                     
-                    // Create category badges
-                    let categoryBadges = '';
-                    if (event.categories && event.categories.length > 0) {
-                        categoryBadges = event.categories.map(cat => 
-                            `<span class="category-badge">${cat}</span>`
-                        ).join('');
-                    }
+                    // Create category options
+                    createCategoryOptions(allEvents);
                     
-                    // Format date for display using our utility function
-                    const formattedDate = formatDateCompact(event.date);
+                    // Initial application of filters and sort
+                    applyFiltersAndSort();
                     
-                    // First category for mobile display
-                    const firstCategory = event.categories && event.categories.length > 0 ? 
-                        `<span class="category-badge">${event.categories[0]}</span>` : '';
-                    
-                    eventCard.innerHTML = `
-                        <a href="event.html?id=${event.id}">
-                            <div class="event-image">
-                                <img src="images/${event.image}" alt="${event.title}" onerror="this.src='images/no-image.jpg';">
-                            </div>
-                            
-                            <!-- Desktop hover info -->
-                            <div class="event-info">
-                                <h2>${event.title}</h2>
-                                <p class="location">${event.location.city}, ${event.location.state}</p>
-                                <p class="date">${formattedDate} ${event.startTime || ''}${event.startTime ? '~' : ''}</p>
-                                <div class="category-badges">
-                                    ${categoryBadges}
-                                </div>
-                            </div>
-                            
-                            <!-- Mobile always-visible info -->
-                            <div class="event-info-mobile">
-                                <div class="mobile-details">
-                                    <p class="mobile-location">${event.location.city}</p>
-                                    <p class="mobile-date">${formattedDate.split('.')[1]}.${formattedDate.split('.')[2]}</p>
-                                </div>
-                                ${firstCategory}
-                            </div>
-                        </a>
-                    `;
-                    
-                    eventsGrid.appendChild(eventCard);
+                    // Add event listeners
+                    setupEventListeners();
+                })
+                .catch(error => {
+                    console.error('Error loading events data:', error);
+                    document.getElementById('events-container').innerHTML = '<p class="error">Error loading events. Please try again later.</p>';
                 });
                 
-                eventsContainer.appendChild(eventsGrid);
-            })
-            .catch(error => {
-                console.error('Error loading events data:', error);
-                document.getElementById('events-container').innerHTML = '<p class="error">Error loading events. Please try again later.</p>';
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!sortDropdown.contains(event.target)) {
+                    sortDropdown.classList.remove('open');
+                }
+                
+                if (!categoriesDropdown.contains(event.target)) {
+                    categoriesDropdown.classList.remove('open');
+                }
             });
+        });
+        
+        // Initialize dropdowns
+        function initializeDropdowns() {
+            // Sort dropdown
+            sortDropdownSelect.addEventListener('click', function(e) {
+                e.stopPropagation();
+                sortDropdown.classList.toggle('open');
+                categoriesDropdown.classList.remove('open');
+            });
+            
+            // Categories dropdown
+            categoriesDropdownSelect.addEventListener('click', function(e) {
+                e.stopPropagation();
+                categoriesDropdown.classList.toggle('open');
+                sortDropdown.classList.remove('open');
+            });
+            
+            // Sort dropdown items
+            sortItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const value = this.getAttribute('data-value');
+                    currentSort = value;
+                    
+                    // Update selected item
+                    sortItems.forEach(si => si.classList.remove('selected'));
+                    this.classList.add('selected');
+                    
+                    // Update dropdown text
+                    sortDropdownSelect.querySelector('span').textContent = this.textContent;
+                    
+                    // Close dropdown and apply filters
+                    sortDropdown.classList.remove('open');
+                    applyFiltersAndSort();
+                });
+            });
+        }
+
+        // Create category options for multi-select dropdown
+        function createCategoryOptions(events) {
+            // Extract unique categories
+            const categories = new Set();
+            events.forEach(event => {
+                if (event.categories && event.categories.length) {
+                    event.categories.forEach(cat => categories.add(cat));
+                }
+            });
+            
+            // Create checkbox for each category
+            const sortedCategories = Array.from(categories).sort();
+            
+            // Clear any existing options
+            categoriesDropdownMenu.innerHTML = '';
+            
+            sortedCategories.forEach(category => {
+                const item = document.createElement('div');
+                item.className = 'dropdown-item';
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.value = category;
+                checkbox.id = `cat-${category.toLowerCase().replace(/\s+/g, '-')}`;
+                checkbox.className = 'category-checkbox';
+                
+                const label = document.createElement('label');
+                label.htmlFor = checkbox.id;
+                label.textContent = category;
+                
+                item.appendChild(checkbox);
+                item.appendChild(label);
+                
+                categoriesDropdownMenu.appendChild(item);
+                
+                // Simplified approach - only prevent dropdown from closing
+                item.addEventListener('click', function(e) {
+                    // Just prevent the dropdown from closing when clicking anywhere in the item
+                    e.stopPropagation();
+                    // No additional checkbox toggling logic here
+                });
+                
+                // Only listen for changes on the checkbox itself
+                checkbox.addEventListener('change', function() {
+                    // Update parent item class
+                    const parentItem = this.closest('.dropdown-item');
+                    if (this.checked) {
+                        parentItem.classList.add('selected');
+                    } else {
+                        parentItem.classList.remove('selected');
+                    }
+                    
+                    // Update active categories
+                    updateActiveCategories();
+                });
+                
+                // Make label explicitly handle focusing the checkbox
+                label.addEventListener('click', function(e) {
+                    // This will focus/click the checkbox due to the 'for' attribute
+                    // We don't need additional logic here
+                });
+            });
+        }
+        
+        // Update active categories based on checkbox state
+        function updateActiveCategories() {
+            activeCategories = [];
+            const checkboxes = categoriesDropdownMenu.querySelectorAll('input[type="checkbox"]');
+            
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    activeCategories.push(checkbox.value);
+                }
+            });
+            
+            // Update dropdown text
+            if (activeCategories.length === 0) {
+                categoriesDropdownSelect.querySelector('span').textContent = 'All Categories';
+            } else {
+                const text = activeCategories.length === 1 
+                    ? activeCategories[0] 
+                    : `${activeCategories.length} categories selected`;
+                
+                // Create a new span to replace the old one (to avoid nested spans)
+                const newSpan = document.createElement('span');
+                newSpan.textContent = text;
+                
+                // Add badge for multiple selections
+                if (activeCategories.length > 1) {
+                    const badge = document.createElement('span');
+                    badge.className = 'selected-count';
+                    badge.textContent = activeCategories.length;
+                    newSpan.appendChild(badge);
+                }
+                
+                // Replace the old span
+                const oldSpan = categoriesDropdownSelect.querySelector('span');
+                categoriesDropdownSelect.replaceChild(newSpan, oldSpan);
+            }
+            
+            // Apply filters
+            applyFiltersAndSort();
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // View toggle
+            gridViewBtn.addEventListener('click', function() {
+                setViewMode('grid');
+            });
+            
+            listViewBtn.addEventListener('click', function() {
+                setViewMode('list');
+            });
+            
+            // Time filter toggle
+            upcomingToggle.addEventListener('click', function() {
+                setTimeFilter('upcoming');
+            });
+            
+            pastToggle.addEventListener('click', function() {
+                setTimeFilter('past');
+            });
+            
+            // Toggle filters panel
+            filterBtn.addEventListener('click', function() {
+                filtersPanel.classList.toggle('visible');
+                this.classList.toggle('active');
+            });
+            
+            // Clear filters
+            clearFiltersBtn.addEventListener('click', function() {
+                // Reset categories
+                const checkboxes = categoriesDropdownMenu.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(cb => {
+                    cb.checked = false;
+                    cb.closest('.dropdown-item').classList.remove('selected');
+                });
+                
+                // Reset active categories
+                activeCategories = [];
+                
+                // Reset dropdown text
+                const newSpan = document.createElement('span');
+                newSpan.textContent = 'All Categories';
+                const oldSpan = categoriesDropdownSelect.querySelector('span');
+                categoriesDropdownSelect.replaceChild(newSpan, oldSpan);
+                
+                // Apply updated filters
+                applyFiltersAndSort();
+            });
+        }
+
+        // Set the time filter (upcoming or past)
+        function setTimeFilter(filter) {
+            timeFilter = filter;
+            
+            // Update toggle UI
+            if (filter === 'upcoming') {
+                upcomingToggle.classList.add('active');
+                pastToggle.classList.remove('active');
+            } else {
+                upcomingToggle.classList.remove('active');
+                pastToggle.classList.add('active');
+            }
+            
+            // Reapply filters
+            applyFiltersAndSort();
+        }
+
+        // Set the view mode (grid or list)
+        function setViewMode(mode) {
+            currentView = mode;
+            
+            // Update toggle UI
+            if (mode === 'grid') {
+                gridViewBtn.classList.add('active');
+                listViewBtn.classList.remove('active');
+                eventsGrid.style.display = 'grid';
+                eventsList.style.display = 'none';
+            } else {
+                gridViewBtn.classList.remove('active');
+                listViewBtn.classList.add('active');
+                eventsGrid.style.display = 'none';
+                eventsList.style.display = 'block';
+            }
+        }
+
+        // Apply current filters and sort, then render events
+        function applyFiltersAndSort() {
+            // Filter events
+            filteredEvents = allEvents.filter(event => {
+                // Category filter
+                const matchesCategory = activeCategories.length === 0 || 
+                    event.categories && event.categories.some(cat => activeCategories.includes(cat));
+                
+                // Time filter (upcoming/past)
+                const eventDate = parseDate(event.date);
+                const matchesTimeFilter = timeFilter === 'upcoming' ? 
+                    eventDate >= today : eventDate < today;
+                
+                return matchesCategory && matchesTimeFilter;
+            });
+            
+            // Sort events
+            filteredEvents.sort((a, b) => {
+                switch (currentSort) {
+                    case 'date-asc':
+                        return parseDate(a.date) - parseDate(b.date);
+                    case 'date-desc':
+                        return parseDate(b.date) - parseDate(a.date);
+                    case 'added-desc':
+                        // For 'recently added', we use the original order in the JSON
+                        return allEvents.indexOf(b) - allEvents.indexOf(a);
+                    default:
+                        return 0;
+                }
+            });
+            
+            // Render the events
+            renderEvents();
+        }
+
+        // Render events in the current view mode
+        function renderEvents() {
+            // Clear both containers
+            eventsGrid.innerHTML = '';
+            eventsList.innerHTML = '';
+            
+            // If no events match filters
+            if (filteredEvents.length === 0) {
+                const noEventsMsg = '<div class="no-events-message">No events match your filters. Try adjusting your criteria.</div>';
+                eventsGrid.innerHTML = noEventsMsg;
+                eventsList.innerHTML = noEventsMsg;
+                return;
+            }
+            
+            // Render events for both views
+            filteredEvents.forEach(event => {
+                // Add to grid view
+                const eventCard = createEventCard(event);
+                eventsGrid.appendChild(eventCard);
+                
+                // Add to list view
+                const eventListItem = createEventListItem(event);
+                eventsList.appendChild(eventListItem);
+            });
+        }
+
+        // Create an event card for grid view
+        function createEventCard(event) {
+            const eventCard = document.createElement('article');
+            eventCard.className = 'event-card';
+            
+            // Create category badges
+            let categoryBadges = '';
+            if (event.categories && event.categories.length > 0) {
+                categoryBadges = event.categories.map(cat => 
+                    `<span class="category-badge">${cat}</span>`
+                ).join('');
+            }
+            
+            // Format date for display
+            const formattedDate = formatDateCompact(event.date);
+            
+            // First category for mobile display
+            const firstCategory = event.categories && event.categories.length > 0 ? 
+                `<span class="category-badge">${event.categories[0]}</span>` : '';
+            
+            eventCard.innerHTML = `
+                <a href="event.html?id=${event.id}">
+                    <div class="event-image">
+                        <img src="images/${event.image}" alt="${event.title}" onerror="this.src='images/no-image.jpg';">
+                    </div>
+                    
+                    <!-- Desktop hover info -->
+                    <div class="event-info">
+                        <h2>${event.title}</h2>
+                        <p class="location">${event.location.city}, ${event.location.state || ''}</p>
+                        <p class="date">${formattedDate} ${event.startTime || ''}${event.startTime ? '~' : ''}</p>
+                        <div class="category-badges">
+                            ${categoryBadges}
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile always-visible info -->
+                    <div class="event-info-mobile">
+                        <div class="mobile-details">
+                            <p class="mobile-location">${event.location.city}</p>
+                            <p class="mobile-date">${formattedDate.split('.')[1]}.${formattedDate.split('.')[2]}</p>
+                        </div>
+                        ${firstCategory}
+                    </div>
+                </a>
+            `;
+            
+            return eventCard;
+        }
+
+        // Create an event list item for list view
+        function createEventListItem(event) {
+            const listItem = document.createElement('article');
+            listItem.className = 'event-list-item';
+            
+            // Create category badges
+            let categoryBadges = '';
+            if (event.categories && event.categories.length > 0) {
+                categoryBadges = event.categories.map(cat => 
+                    `<span class="category-badge">${cat}</span>`
+                ).join('');
+            }
+            
+            // Format date & time for display
+            const formattedDate = formatDateLong(event.date);
+            let timeDisplay = '';
+            if (event.startTime) {
+                timeDisplay = formatTime(event.startTime);
+                if (event.endTime) {
+                    timeDisplay += ` - ${formatTime(event.endTime)}`;
+                }
+            }
+            
+            listItem.innerHTML = `
+                <a href="event.html?id=${event.id}" class="event-list-thumb">
+                    <img src="images/${event.image}" alt="${event.title}" onerror="this.src='images/no-image.jpg';">
+                </a>
+                <div class="event-list-details">
+                    <div>
+                        <h3><a href="event.html?id=${event.id}">${event.title}</a></h3>
+                        <div class="event-list-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> ${event.location.city}, ${event.location.state || ''}</span>
+                            <span><i class="far fa-calendar-alt"></i> ${formattedDate}</span>
+                            ${timeDisplay ? `<span><i class="far fa-clock"></i> ${timeDisplay}</span>` : ''}
+                        </div>
+                    </div>
+                    <div class="category-badges">
+                        ${categoryBadges}
+                    </div>
+                </div>
+            `;
+            
+            return listItem;
+        }
     </script>
 </body>
 </html>
