@@ -267,6 +267,42 @@
       "categories": ["Breaking", "Workshop"],
       "organizer": "@cypherqueenz",
       "description": "CYPHER Queenz Portland hosts a special Bgirl session creating space for women to learn, session, cypher and build community in the Hip Hop breaking scene.\n\nThis session includes:\n- Workshop led by @leah_scotia\n- Open cypher time\n- All levels welcome!\n\nEveryone's welcome to stick around for the @break_thyself session immediately following from 4-6 pm.\n\nCYPHER Queenz sessions aim to elevate women in the breaking community while providing a supportive environment for learning and growth.\n\nFlyer design: @Chris.kaku"
+    },
+    {
+      "id": "bboy-beatdown",
+      "title": "THE BBOY BEATDOWN",
+      "location": {
+        "city": "Richland",
+        "state": "WA",
+        "venue": "The Uptown Theatre",
+        "address": "1300 Jadwin Ave, Richland, WA 99354"
+      },
+      "date": "2025-05-17",
+      "startTime": "13:00",
+      "endTime": "21:00",
+      "image": "bboy-beatdown.jpg",
+      "externalLink": "https://www.instagram.com/p/DHreHgCSwpv",
+      "categories": ["Breaking", "Popping", "Graffiti", "Hip-Hop", "MC Battle"],
+      "organizer": "Arsenal Wars & Tablist of the Tri / @prokidsofficial",
+      "description": "THE BBOY BEATDOWN brings together multiple elements of hip-hop culture for an epic day of battles and art.\n\nThe event features:\n- 2v2 Bboy/Bgirl battle\n- Skratcher Tri Cities\n- Arsenal Wars (Graffiti - Art Display)\n- 1v1 Funk n Poppin Battles\n- Rap/Emcee Battles\n\nThis comprehensive celebration of hip-hop culture brings together dancers, artists, DJs, and MCs in the Tri-Cities area.\n\nSponsors include:\n- Heart of the Tri Cities\n- Thomas Chung Videography | Photography\n- Skratcher"
+    },
+    {
+      "id": "cypher-town-silverback-europe",
+      "title": "CYPHER TOWN HIP-HOP FESTIVAL: SILVERBACK EUROPE",
+      "location": {
+        "city": "Budapest",
+        "state": "",
+        "venue": "Multiple Venues",
+        "address": "Finals Day: Dózsa György út 53., 1135 Budapest"
+      },
+      "date": "2025-08-01",
+      "startTime": "10:00",
+      "endTime": "22:00",
+      "image": "cypher-town-silverback.jpg",
+      "externalLink": "https://www.instagram.com/cyphertown/",
+      "categories": ["Breaking", "Hip-Hop", "House", "All Styles", "Festival"],
+      "organizer": "Cypher Town (@cyphertown)",
+      "description": "In the summer of 2025, Cypher Town takes over the streets of Budapest once again to celebrate the diversity and raw energy of hip-hop culture! This year makes history as Silverback comes to Europe for the first time ever!\n\nThis three-day festival features world-class breaking battles, workshops, and competitions across multiple styles with an impressive €27,000 (~11,000,000 HUF) total prize pool.\n\nCompetition Categories:\nStage 1 - Breaking:\n- B-Girl 1vs1\n- B-Boy OPEN 1vs1\n- Kids 1vs1\n- Crew 3vs3\n\nStage 2 - All Style:\n- Hip-Hop 1vs1\n- House 1vs1\n- All Style 2vs2\n\nEvent Schedule:\nDay 1 (August 1) – Workshop Day\n📍 1134 Budapest, Dózsa György út 53\n\nDay 2 (August 2) – Pre-selection Battles\n📍 1062 Budapest, Váci út 1-3 (Westend Shopping Center)\n(Free for audience, registration fee for competitors)\n\nDay 3 (August 3) – Finals Day (12:00 PM - 10:00 PM)\n📍 1134 Budapest, Dózsa György út 53\n\nSpecial Note: Cypher Town happens just one week after Outbreak Europe (only 160 km from Budapest), and the celebration continues at Sziget Festival (August 6-11)! Perfect for an extended European hip-hop tour.\n\nFree entry for children up to 4 years old."
     }
   ]
 }
