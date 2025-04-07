@@ -382,6 +382,42 @@
       "organizer": "@dubai_openbreaking",
       "flyerArtist": "@ziknikita",
       "description": "Mark your calendars for this major international breaking event in Dubai, UAE on December 19-20, 2025. This high-stakes competition features multiple battle categories with an impressive prize pool.\n\nCompetition Categories (16+ age requirement for all):\n- 1vs1 B-Boys\n- 1vs1 B-Girls\n- 5vs5 Crew Battles\n\nEvent Features:\n- 9 International Judges\n- Total Prize Money Over $100,000\n\nThis two-day event promises to bring together top talent from around the world in one of the most prestigious breaking competitions of 2025.\n\nFlyer design by @ziknikita\nMusic by @djleg1oner"
+    },
+    {
+      "id": "reckless-footwork-battle",
+      "title": "THE RECKLE$$ FOOTWORK BATTLE",
+      "location": {
+        "city": "Seattle",
+        "state": "WA",
+        "venue": "Coindexter's Bar",
+        "address": "8556 Greenwood Ave N, Seattle, WA 98103"
+      },
+      "date": "2025-04-15",
+      "startTime": "18:00",
+      "endTime": "21:00",
+      "image": "reckless-footwork-battle.jpg",
+      "externalLink": "https://www.instagram.com/p/DIH4XZuSGFY/",
+      "categories": ["Breaking", "Footwork"],
+      "organizer": "AOM (@official_aom)",
+      "description": "In Memory of our brother Isaiah aka \"Reck\"...\n\nThe Reckle$$ Footwork Battle is a 1vs1 breaking competition highlighting the footwork category. Tops and drops will also be scored, as they should all flow together even when highlighting footwork.\n\nBrotha Reck was true to the game, he kept it raw and reckle$$. This battle honors his name and legacy. This is an invite-only bracket featuring a Top 16 Bboy format.\n\nSchedule:\n- Event: 6:00pm-9:00pm\n- Invited Top 16 Bboy bracket starts at 7:00pm\n\nThe event will include games, drinks, and open cyphers for everyone to enjoy.\n\nNote: This is a 21+ event with valid ID required."
+    },
+    {
+      "id": "get-down-night-market",
+      "title": "GET DOWN AT THE NIGHT MARKET: Tradition 2025 Summer Edition",
+      "location": {
+        "city": "Bremerton",
+        "state": "WA",
+        "venue": "Bremerton Boardwalk Night Market",
+        "address": "120 Washington Beach Ave, Bremerton, WA"
+      },
+      "date": "2025-06-06",
+      "startTime": "16:00",
+      "endTime": "21:00",
+      "image": "get-down-night-market.jpg",
+      "externalLink": "https://www.facebook.com/share/153LcnWkfk/",
+      "categories": ["All Styles", "Breaking", "Hip-Hop", "House"],
+      "organizer": "Tradition & Sunny Jack",
+      "description": "Tradition & Sunny Jack presents Get Down at the Night Market Dance Battle! This all-ages outdoor event combines dancing, food, and community vibes at the beautiful Bremerton Boardwalk Waterfront.\n\nEvent Features:\n- 1vs1 Dance Battle with Cash Prize\n- Free Entry for Spectators and Competitors\n- Food/Beer Garden/Music\n- All Ages Welcome\n\nMusic Styles:\n- Break Beats\n- Old School HipHop\n- House\n- Funk\n\nSchedule:\n- Sign Up: 4:00pm\n- Prelims: 5:00pm\n- Top 8: 6:30pm\n- Top 4: 7:30pm\n- Finals: 8:30pm\n\nHost/MC: Jireh Soriano\nDJ: DJ Digz\nJudges: TBD\n\nCome enjoy the vibrant atmosphere of the Bremerton Boardwalk Night Market while witnessing exciting dance battles!"
     }
   ]
 }
