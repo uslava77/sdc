@@ -253,8 +253,8 @@
             // Render the mobile list view
             renderMobileListView(year, month, events);
         }
-        
-        // New function to render the mobile list view
+
+        // Updated function to render the mobile list view
         function renderMobileListView(year, month, allEvents) {
             const monthEventsListEl = document.getElementById('month-events-list');
             
@@ -314,11 +314,16 @@
                             ).join('');
                         }
                         
+                        // Safely access location data
+                        const city = event.location && event.location.city ? event.location.city : '';
+                        const state = event.location && event.location.state ? event.location.state : '';
+                        const locationDisplay = city + (city && state ? ', ' : '') + state;
+                        
                         listViewHTML += `
                             <div class="list-event-item">
                                 <a href="event.html?id=${event.id}">${event.title}</a>
                                 <div class="event-meta">
-                                    <span>${event.location.city}, ${event.location.state}</span>
+                                    <span>${locationDisplay}</span>
                                     ${timeDisplay ? `<span> • ${timeDisplay}</span>` : ''}
                                 </div>
                                 <div class="category-badges">
@@ -334,6 +339,7 @@
                     `;
                 });
             
+            // Set the inner HTML of the container
             monthEventsListEl.innerHTML = listViewHTML;
         }
     </script>
