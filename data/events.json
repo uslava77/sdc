@@ -245,7 +245,7 @@
         "venue": "Boombox Bar",
         "address": "9680 16th Ave SW"
       },
-      "date": "2025-04-19",
+      "date": "2025-05-03",
       "startTime": "14:00",
       "endTime": "20:00",
       "image": "style-is-key.jpg",
@@ -456,6 +456,77 @@
       "organizer": "New Birth Crew",
       "flyerArtist": "@nicegreg",
       "description": "New Birth Crew 16 Year Anniversary in Portland, Oregon.\n\nCompetition Categories:\n- 2v2 Breakin' Battle (Prize: $1000)\n- 1v1 Top2Bottom (Toprock + Footwork) (Prize: $500)\n\nDJs:\n- DJ Foojin\n- DJ Edy Slic\n\nSave the date and book your flights.\n\nFlyer artwork by @nicegreg"
+    },
+    {
+      "id": "zona-central-red-deer",
+      "title": "ZONA CENTRAL RED DEER",
+      "location": {
+        "city": "Red Deer",
+        "state": "AB",
+        "venue": "Zona Central",
+        "address": "5008 48 St, Red Deer, AB"
+      },
+      "date": "2025-04-13",
+      "startTime": "16:30",
+      "endTime": "21:00",
+      "image": "zona-central-red-deer.jpg",
+      "categories": ["Breaking", "All Styles"],
+      "organizer": "The Breaks YYC",
+      "description": "Zona Central brings multiple battle categories to Red Deer with competitions for all ages.\n\nCompetition Categories:\n- Alpha Circuit Breaking 1vs1 Under 10 ($100 prize)\n- Alpha Circuit Breaking 1vs1 Under 14 ($100 prize)\n- Alpha Circuit Breaking 1vs1 14+ ($100 prize)\n- Open Styles Youth 7 to Smoke (14 and under) ($100 prize)\n- 3vs3 Open Styles ($300 prize)\n\nSchedule:\n- Doors Open: 4:30 PM\n\nEntry:\n- $15 for First Battle\n- $10 for each additional category\n- $15 for Spectators\n\nDJs: DJ Catfish & Grimrock\n\nOrganized in partnership with The Breaks YYC, Pound It, and Alpha Circuit."
+    },
+    {
+      "id": "jeux-urbains-breaking",
+      "title": "JEUX URBAINS - 1X1 BREAKING BATTLE",
+      "location": {
+        "city": "Montreal",
+        "state": "QC",
+        "venue": "Centre Eaton de Montréal",
+        "address": "Centre Eaton, Montreal, QC"
+      },
+      "date": "2025-05-18",
+      "startTime": "12:00",
+      "endTime": "20:00",
+      "image": "jeux-urbains-breaking.jpg",
+      "externalLink": "https://instagram.com/jeuxurbains",
+      "categories": ["Breaking"],
+      "organizer": "Jeux Urbains (@jeuxurbains)",
+      "description": "Prêt.e.s à juger les mouvements et les performances les plus intenses! 🕺Rencontre le panel d'experts de la compétition de breaking le 18 mai aux Jeux Urbains 2025! 🏆Avec @breakvicious à l'organisation, @flayosito, @minh_tea et Roméo à la table des juges, @Alex.sugy pour MC et @djmanny.ssuave à la musique🔥\n\nReady to judge the most intense moves and performances! 🕺Meet the panel of breaking competition experts on May 18 at Urban Games! 🏆 With @breakvicious organizing, @flayosito, @minh_tea and Romeo at the judges' table, @Alex.sugy for MC and @djmanny.ssuave on music🔥\n\nCompetition Features:\n- 1vs1 Breaking Battle\n- $2000 in prizes\n\nJudges: Cleopatra, Fléau, Romeo\nMC: Sugy\nDJ: Manny Suave\n\nLocation: Centre Eaton de Montréal"
+    },
+    {
+      "id": "redbull-bcone-canada-final",
+      "title": "RED BULL BC ONE CANADA FINAL",
+      "location": {
+        "city": "Montreal",
+        "state": "QC",
+        "venue": "TOHU",
+        "address": "2345 Rue Jarry Est, Montréal, QC"
+      },
+      "date": "2025-04-26",
+      "startTime": "19:00",
+      "endTime": "22:00",
+      "image": "redbull-bcone-canada.jpg",
+      "externalLink": "https://redbull.ca/bcone",
+      "categories": ["Breaking"],
+      "organizer": "Red Bull",
+      "description": "Ça va être🔥 Montréal n'accueille pas seulement les Nationaux cette année, mais aussi le camp Red Bull ! Un week-end d'activités, avec plein d'événements gratuits.\n\nIt's going to be 🔥 Montreal is not only hosting the Nationals this year, but also the Red Bull camp! A weekend of activities, with many free events.\n\nWEEKEND SCHEDULE / HORAIRE DU WEEK-END:\n\nFRIDAY APRIL 25 / VENDREDI 25 AVRIL:\n- 17:30-19:00: FOOTWORKERZ BATTLE - Winner gets a spot in the Cypher Footworkerz at the world final in Tokyo (Le Monastère, 1439 Rue Sainte-Catherine Ouest)\n- 19:00: LAST CHANCE CYPHER - Regional qualification: only top 4 go to the national final (Le Monastère)\n\nSATURDAY APRIL 26 / SAMEDI 26 AVRIL:\n- 11:00-13:00: WORKSHOP with PHIL WIZARD + LEE - FREE workshop! (Le Monastère)\n- 14:00-16:00: PRODUCTION WORKSHOP with LIL SHAO - Photography tips for capturing dance movement (Le Monastère)\n- 18:00-18:30: MEGUS DOCUMENTARY SCREENING by Léo Caron aka Fléau (TOHU lobby)\n- 19:00: RED BULL BC ONE CANADA FINAL - Top 16 Canadian B-boys and B-girls compete for the crown! (TOHU)\n- 22:00: AFTER PARTY with DJ (TOHU lobby)\n\nTickets available at redbull.ca/bcone"
+    },
+    {
+      "id": "loop-the-break-vol4",
+      "title": "LOOP THE BREAK VOL. 4",
+      "location": {
+        "city": "Helsinki",
+        "state": "",
+        "venue": "Korjaamo",
+        "address": "Töölönkatu 51 A-B, Helsinki"
+      },
+      "date": "2025-05-16",
+      "startTime": "12:00",
+      "endTime": "22:00",
+      "image": "loop-the-break-vol4.jpg",
+      "externalLink": "https://instagram.com/loopthebreak",
+      "categories": ["Breaking", "Popping"],
+      "organizer": "Loop The Break",
+      "description": "Loop the Break vol. 4 is about to shake Helsinki! Three days of raw energy, top battles, and global vibes.\n\nEvent Schedule:\n- Fri, May 16 – Popping 1vs1\n- Sat, May 17 – Popping 1vs1 + Breaking 2vs2 (Bonnie & Clyde)\n- Sun, May 18 – Workshops with the legends\n\nPrizes:\n- Popping 1vs1: €1000\n- Breaking 2vs2: Trip to Canada\n\nTickets:\n- 2-day pass: €25\n- 1-day pass: €15\n\nDJs:\n- DJ Khanfu\n- DJ Olli aka Mercy-1\n\nJudges:\n- Popping: Kid Boogie, Ness, Paris\n- Breaking: El Nino, Hoo Hoo, Movie One\n\nHost: Vicious\n\nThe event includes after-parties and workshops throughout the weekend. Spots are limited – get your tickets and register for battles & workshops now!\n\nSupported by: Breaking Canada, You Be Ill, Nordic Buddies, G-Shock Finland, Korjaamo, Helsinki, Print Helsinki, Gustyle Barbershop, All For Funk, Soul Designs, Sweet Technique, Stance Elements"
     }
   ]
 }
