@@ -527,6 +527,60 @@
       "categories": ["Breaking", "Popping"],
       "organizer": "Loop The Break",
       "description": "Loop the Break vol. 4 is about to shake Helsinki! Three days of raw energy, top battles, and global vibes.\n\nEvent Schedule:\n- Fri, May 16 – Popping 1vs1\n- Sat, May 17 – Popping 1vs1 + Breaking 2vs2 (Bonnie & Clyde)\n- Sun, May 18 – Workshops with the legends\n\nPrizes:\n- Popping 1vs1: €1000\n- Breaking 2vs2: Trip to Canada\n\nTickets:\n- 2-day pass: €25\n- 1-day pass: €15\n\nDJs:\n- DJ Khanfu\n- DJ Olli aka Mercy-1\n\nJudges:\n- Popping: Kid Boogie, Ness, Paris\n- Breaking: El Nino, Hoo Hoo, Movie One\n\nHost: Vicious\n\nThe event includes after-parties and workshops throughout the weekend. Spots are limited – get your tickets and register for battles & workshops now!\n\nSupported by: Breaking Canada, You Be Ill, Nordic Buddies, G-Shock Finland, Korjaamo, Helsinki, Print Helsinki, Gustyle Barbershop, All For Funk, Soul Designs, Sweet Technique, Stance Elements"
+    },
+    {
+      "id": "roasted-pdx",
+      "title": "ROASTED",
+      "location": {
+        "city": "Portland",
+        "state": "OR",
+        "venue": "Kollectivo",
+        "address": "959 SE Division St, Portland, OR"
+      },
+      "date": "2025-04-26",
+      "startTime": "16:20",
+      "endTime": "22:00",
+      "image": "roasted-pdx.jpg",
+      "externalLink": "https://www.instagram.com/p/DHwL7qnyCtl/",
+      "categories": ["Breaking", "Krump", "Popping", "Locking"],
+      "organizer": "Charlie Chillout & Whacko",
+      "description": "ROASTED - In honor of Rusty \"Roasty\" Waldron\n\nA free entry breaking battle with major cash prizes and special performances in Portland!\n\nCompetition Categories:\n- 3v3 Breaking Battle ($1000 cash prize)\n- Option to compete solo (\"grab the bag solo\")\n- Second place prize: $300\n- Cypher Chef prize: $100\n- Freshest Fit Contest\n\nJudges:\n- Philthy\n- Data\n- Free\n\nGuest Performances:\n- Krump Session\n- Popping Demo\n- Locking Collab\n\nRocking Exhibition: Whacko vs. Charlie Chillout\n\nMusic by: DJ Mighty Moves & Demetre Baca (soulful send off)\n\nDoors open at 4:20 PM"
+    },
+    {
+      "id": "keep-portland-weird",
+      "title": "KEEP PORTLAND WEIRD",
+      "location": {
+        "city": "Portland",
+        "state": "OR",
+        "venue": "TBA",
+        "address": "TBA"
+      },
+      "date": "2025-07-13",
+      "startTime": "16:00",
+      "endTime": "22:00",
+      "image": "keep-portland-weird.jpg",
+      "externalLink": "https://www.instagram.com/kpw_2025/",
+      "categories": ["Breaking", "All Styles"],
+      "organizer": "KPW",
+      "description": "Keep Portland Weird (KPW)\n\nCompetition Categories:\n- 2v2 Open Style\n- 1v1 Breaking 7 to Smoke\n\nHosted by:\n- Nicki\n- Kybot\n- JoyBoy\n- Walle\n\nSave the date for this Portland summer battle featuring both breaking and open styles competitions. More information coming soon!\n\n#battle #dance #event #challenge #portland #oregon #keepportlandweird #hiphopculture"
+    },
+    {
+      "id": "the-getdown-vol4",
+      "title": "THE GETDOWN VOL. 4",
+      "location": {
+        "city": "Walla Walla",
+        "state": "WA",
+        "venue": "Heritage Square Park",
+        "address": "116 E Main St, Walla Walla, WA 99362"
+      },
+      "date": "2025-06-21",
+      "startTime": "12:00",
+      "endTime": "20:00",
+      "image": "the-getdown-vol4.jpg",
+      "externalLink": "https://www.instagram.com/thegetdownjam/",
+      "categories": ["Breaking", "Hip-Hop"],
+      "organizer": "The Getdown",
+      "description": "The Getdown returns for its fourth volume in downtown Walla Walla at Heritage Square Park. \n\nJune 21st, 2025 - mark your calendars. More information will be announced soon.\n\nLocation: Heritage Square Park\n116 E Main St, Walla Walla, WA 99362"
     }
   ]
 }
