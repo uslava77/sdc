@@ -558,7 +558,7 @@
       "date": "2025-07-13",
       "startTime": "16:00",
       "endTime": "22:00",
-      "image": "keep-portland-weird.jpg",
+      "image": "keep-portland-weird2.jpg",
       "externalLink": "https://www.instagram.com/kpw_2025/",
       "categories": ["Breaking", "All Styles"],
       "organizer": "KPW",
@@ -599,6 +599,79 @@
       "categories": ["Breaking", "Youth"],
       "organizer": "Rapture",
       "description": "Rapture - an expression or manifestation of ecstasy or passion!\n\nOur annual fundraising breaking event features a unique Pro-Am format with professional and student breakers paired together. This year's format will be 2v2 (Pro & Student duos) with preliminary battles to determine the top spots. Once selected, pros and students will be randomly paired to battle together as duos.\n\nEvent Format:\nPreliminary Rounds:\n- Top 16 Pros selection (open level 17 & up)\n- Top 8 students (12 & under) selection\n- Top 8 students (13-16 years) selection\n\nMain Event:\n- Top 8 Pros randomized selection pairing with top 8 (13-16 year old students)\n- Top 9-16 Pros randomized selection pairing with the top 8 (12 & under students)\n\nPrizes:\n- Two sets of winners\n- 1st place out of the top 8 Pros & top 8 (13-16 students): $150 cash\n- 1st place out of the top 9-16 Pros & top 8 (12 & under students): $150 cash\n\nMC: @thepeoplestyrant (Sevi Sev on flyer)\nDJ: @dj.jaylo\nJudges: @mattscndrl (Infamous Matt), @eddwhat, @jimochiiwaruii\n\nAdmission Fee: $15 per person at the door\n\nThe goal is to bring everyone under one roof and inspire the next generation of breakers to help elevate the local breaking scene!"
+    },
+    {
+      "id": "mbc-championship-finale",
+      "title": "MBC CHAMPIONSHIP FINALE",
+      "location": {
+        "city": "Renton",
+        "state": "WA",
+        "venue": "Carco Theatre",
+        "address": "1717 Maple Valley Highway"
+      },
+      "date": "2025-05-23",
+      "startTime": "18:00",
+      "endTime": "20:30",
+      "image": "mbc-championship-finale.jpg",
+      "externalLink": "https://www.instagram.com/p/DJKiQMBTZF6/",
+      "categories": ["Breaking"],
+      "organizer": "@bbf_dance",
+      "description": "Breaking Boundaries presents the Massive Break Challenge Championship Finale! This free community event features high-energy breaking battles and showcases.\n\nDoors open: 6:00 PM\nBattles & Showcases: 6:15 – 8:30 PM\n\nJudges: Guest judges\nDJ: TBA\nMC: TBA\nPrizes: TBA\n\nSelect dancers will be invited to perform at Seattle Folklife Festival on Monday, May 26, with a Crew vs. Crew battle open to all MBC participants.\n\nEntry: Free general admission\n\nRSVP & Sign Up: https://tinyurl.com/2025MBC"
+    },
+    {
+      "id": "era-era-battle",
+      "title": "ERA ERA BATTLE",
+      "location": {
+        "city": "Seattle",
+        "state": "WA",
+        "venue": "Seattle Vineyard",
+        "address": "4142 Brooklyn Ave NE"
+      },
+      "date": "2025-05-10",
+      "startTime": "15:00",
+      "endTime": "19:00",
+      "image": "era-era-battle.jpg",
+      "externalLink": "https://www.instagram.com/p/DI2IHBDTUi1/",
+      "categories": ["All Styles"],
+      "organizer": "HHSA",
+      "description": "🎶💿HHSA Presents: ERA ERA Battle 💿🎶\n\nLet’s see how well you adapt through the eras as each round features music from a different decade! 🕺🪩\n\n📆: Saturday, May 10 \n⏰: 3:00-7:00\n📍: Seattle Vineyard 4142 Brooklyn Ave NE\n\n🎟️ $10 Entry\n💰$300 prize (1v1) | $50 & HHSA Merch (7-smoke)\n\nMC, DJ, and Judges TBA!\n\nSign up form: https://forms.gle/eS6FXHbh9UvD83xD6"
+    },
+    {
+      "id": "kapwastrong-fundraiser-battle",
+      "title": "KAPWASTRONG FUNDRAISER BATTLE",
+      "location": {
+        "city": "Seattle",
+        "state": "WA",
+        "venue": "Seattle Vineyard",
+        "address": "4142 Brooklyn Ave NE"
+      },
+      "date": "2025-06-07",
+      "startTime": "17:00",
+      "endTime": "",
+      "image": "kapwa-strong-fundraiser-battle.jpg",
+      "externalLink": "https://www.instagram.com/p/DJSa9SrBFzx/",
+      "categories": ["Breaking"],
+      "organizer": "@outshineproductions206",
+      "description": "On April 26th, 2025 the Filipino community in Vancouver, BC faced an abhorrent tragedy as many people lost their lives or injured from such a despicable act. Being neighbors and PNW family, we could not sit here and do nothing to help/show support to our Filipino and Vancouver brothers and sisters. This is our answer to lend a hand of comfort in a time of pain.\n\nPlease join us for the #KapwaStrong Fundraiser Battle for the Filipino Community of Vancouver.\n\nAll proceeds will be donated to Filipino BC, to find out more about this organization or to donate if you can’t make it to the event visit https://filipinobc.com\n\n2 vs 2 Bboy Battle \nDate: June 7th, 2025\nDoors Open: 5 pm\nAdmission (suggested donation): $20\nVenue: Seattle Vineyard\n4142 Brooklyn Ave NE\nSeattle, WA 98105\n\nDJ: Erv (Illaskan Assassins, Anchorage AK)\n\nAs a scene that has been influenced by many of our Filipino artists, it’s fitting to give back to them. Shoutout to the Seattle Vineyard Church for donating the space as well!\n\n“Pag may hirap, may ginhawa” - when there is hardship, there is also relief.\n\n#bboy #community #bcstrong #vancouver #seattle #dance #filipino #fundraiser #battle #pnw #lapulapu #unity #breakdance #donation"
+    },
+    {
+      "id": "cypher-queenz-pdx-session-cypher",
+      "title": "CYPHER Queenz PDX Session & Cypher",
+      "location": {
+        "city": "Portland",
+        "state": "OR",
+        "venue": "Steps PDX",
+        "address": "1734 SE 12th Ave"
+      },
+      "date": "2025-05-04",
+      "startTime": "14:00",
+      "endTime": "16:00",
+      "image": "cypher-queenz-pdx.jpg",
+      "externalLink": "https://instagram.com/cypherqueenz",
+      "flyerArtist": "@chris.kaku",
+      "categories": ["Session & Cypher"],
+      "organizer": "CYPHER Queenz PDX",
+      "description": "We’re hosting our CYPHER Queenz Portland Bgirl session THIS Sunday, May 4th from 2 - 4pm! We’ll session followed by cypher time! All levels welcome!\n\n✨ CYPHER Queenz sessions create a space for Bgirls to learn, session, cypher and build community elevating women in the Hip Hop breaking scene. See link in bio for more info!\n\n📍@stepspdx: 1734 SE 12th Ave Portland, OR  97214\n\n✨️Everyone's welcome to stick around for the @break_thyself session immediately following from 4-6 pm! Thank you @break_thyself for the support, and space collab!\n\n🔥 Thanks to @Chris.kaku for the flyer!"
     }
   ]
 }
