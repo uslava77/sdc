@@ -669,7 +669,7 @@
       "image": "cypher-queenz-pdx.jpg",
       "externalLink": "https://instagram.com/cypherqueenz",
       "flyerArtist": "@chris.kaku",
-      "categories": ["Session & Cypher"],
+      "categories": ["Breaking"],
       "organizer": "CYPHER Queenz PDX",
       "description": "We’re hosting our CYPHER Queenz Portland Bgirl session THIS Sunday, May 4th from 2 - 4pm! We’ll session followed by cypher time! All levels welcome!\n\n✨ CYPHER Queenz sessions create a space for Bgirls to learn, session, cypher and build community elevating women in the Hip Hop breaking scene. See link in bio for more info!\n\n📍@stepspdx: 1734 SE 12th Ave Portland, OR  97214\n\n✨️Everyone's welcome to stick around for the @break_thyself session immediately following from 4-6 pm! Thank you @break_thyself for the support, and space collab!\n\n🔥 Thanks to @Chris.kaku for the flyer!"
     },
@@ -824,6 +824,89 @@
       "organizer": "@kimchifest.ca",
       "categories": ["Breaking"],
       "description": "🔥 The Ultimate Breaking Championship is coming to Vancouver! 🔥\n\nJoin us at the 2025 Kimchi & K-Food Festival for the biggest B-Boy showdown of the year — the Ultimate Breaking Championship!\n\n📅 Date: Sep 5th, 2025\n📍 Location: The City of Lougheed, Burnaby (Main Stage)\n\n💥 Categories:\n2v2 Adult\n2v2 Youth (14 & under)\n\n🎤 MC / DJ / Judges: To Be Announced\n🏆 Total Prize: $1,500\n🎟 Entry Fee: FREE\n\nThis is more than a dance battle — a cultural celebration where Ultimate Breaking Championship meets global street dance! Come vibe with top crews, vote live via our mobile app, and experience breaking culture at its best.\nDon't miss the heat.\n🔥 Let's battle it out at #KimchiFest2025!\n\n👉 Registration starts June 1st at www.kimchifest.ca\n📩 Inquiries: apply@kimchifest.ca\n\n#UltimateBreakingChampionship #KimchiFest2025 #BBoyConnectVancouver2025 #VancouverEvents #StreetDanceBattle #KHipHopVibes #2v2Battle #BreakingCulture #KFoodFestival #BurnabyEvents #KCultureGlobal #BboyBattleCanada #BreakingOlympics2025 #DanceYourWay #FreeEntryEvent"
+    },
+        {
+      "id": "cf25",
+      "title": "Cypher Fest 2025",
+      "location": {
+        "city": "Whitehorse",
+        "state": "Yukon",
+        "venue": "",
+        "address": ""
+      },
+      "date": "2025-08-08",
+      "image": "cf25.jpg",
+      "externalLink": "https://www.instagram.com/cypherfest25/",
+      "organizer": "@cypherfest25",
+      "flyerArtist": "@cypherfest25",
+      "categories": ["Breaking"],
+      "description": "Breaking X Hiphop Festival"
+    },
+    {
+      "id": "battle-for-the-north",
+      "title": "Battle for the North",
+      "location": {
+        "city": "Mississauga",
+        "state": "ON",
+        "venue": "Celebration Square",
+        "address": ""
+      },
+      "date": "2025-07-12",
+      "image": "battle-for-the-north.jpg",
+      "externalLink": "https://www.instagram.com/p/DLQT1XROd0D",
+      "flyerArtist": "@sancho_ff_",
+      "organizer": "@breakingcanada, @ensemblesession",
+      "categories": ["Breaking"],
+      "description": "July 12th at @jackalopefest at Celebration Square in collaboration with @ensemblesession\n\n@youbeill.official @breakingcanada Bonnie N Clyde Interim Championnship featuring @loopthebreak winners from Italy 🇮🇹 @bgirl_alessandrina & @bboy_edo__  taking on top contenders @bgirl.emmaa & @straycurt from Vancouver, Canada. 🇨🇦\n\nWinners will be back to unify the championship against @ontonsnc and @bgirl_konatsu who are unfortunately unable to compete due to injury.\n\nThe event will also feature an open 7 to Smoke with prelims and Full Crew Battle for a over $2000 in cash.\n\nMore details coming soon!\n\n@sancho_ff_ with the flyer."
+    },
+    {
+      "id": "dialogue-house-battle",
+      "title": "Dialogue House Battle",
+      "location": {
+        "city": "Seattle",
+        "state": "WA",
+        "venue": "The Beacon",
+        "address": ""
+      },
+      "date": "2025-08-16",
+      "image": "dialogue-house-battle.jpg",
+      "externalLink": "https://www.instagram.com/p/DLSnFC1pkas",
+      "flyerArtist": "@itspchew",
+      "categories": ["House"],
+      "description": "Seattle! The one and only Brooklyn Terry will be here for an incredible weekend of celebration, connection and education.\n\nAug 16–17: Workshops & 1v1 House Battle\n\n**Battle Details:**\n• Dialogue House Battle 1v1\n• Cypher Prelims\n• Top 8 choose their opponent to “dialogue” with\n• 2 rounds per person; Finals 3 rounds per person\n• Before & after battles, judges discuss what battles mean to them and why they chose who they chose.\n\n**Workshop Details:**\n• 6 hours over 2 days (Aug 16 & 17), 12:00–15:00\n• Covering groove, steps as techniques, traveling, movement of the culture, & a final Q&A panel day 2.\n\n**Lineup:**\nDJ: @mactrayy\nJudges: @brooklynterryef, @orb4444, @amyoforreal\nMC: Jojo\n\n*Graphic design by @itspchew*\n\nMore detailed info on judges to come. DM for questions. #housebattle #pnwhousecommunity #brooklynterry"
+    },
+    {
+      "id": "three-stripe-throwdown",
+      "title": "Three Stripe Throwdown",
+      "location": {
+        "city": "Vancouver",
+        "state": "BC",
+        "venue": "Adidas Brand Centre Vancouver",
+        "address": "750 Burrard St"
+      },
+      "date": "2025-07-19",
+      "startTime": "19:00",
+      "image": "three-stripe-throwdown.jpg",
+      "externalLink": "https://www.instagram.com/p/DLVT9byvne7",
+      "organizer": "@adidas, @funk.n.sole",
+      "categories": ["Breaking", "House"],
+      "description": "VANCOUVER GET READY TO THROW DOWN! 💥💥💥\n\nThe inaugural @threesstripethrowdown presented by @adidas and @funk.n.sole hits July 19th!\n\nAn electrifying battle series:\n3 vs 3 Breaking⛓️‍💥 & House Dance 7-To-Smoke💨\n\n🤸🏽‍ DANCERS: FREE entry – link in bio for sign-up\n👀 FANS: Tickets include drinks, raffle, and an exclusive gift – link in bio, limited capacity.\n\n📍 750 Burrard St. Vancouver, BC V6Z 1X5\n🗓️ Saturday, July 19, 2025 7:00 PM\n\nEvery ticket supports the #KapwaStrongFund\nLet’s make history together! #threesstripethrowdown #vancouverevents #dancebattle #supportivecommunity #thingstodovancouver"
+    },
+    {
+      "id": "cidc-vancouver-qualifier",
+      "title": "CIDC Vancouver Qualifier",
+      "location": {
+        "city": "Burnaby",
+        "state": "BC",
+        "venue": "The Rec Room Brentwood",
+        "address": "1920 Willingdon Ave Unit 2106"
+      },
+      "date": "2025-07-05",
+      "image": "cidc-vancouver-qualifier.jpg",
+      "externalLink": "https://www.instagram.com/p/DLFoVjtR2Xm",
+      "organizer": "@breaking.bc, @nextmovedanceco",
+      "categories": ["All Styles"],
+      "description": "ARE YOU READY VANCOUVER? 🤩\n\nBreaking BC @breaking.bc and Next Move Dance @nextmovedanceco present CIDC Vancouver qualifier 💪\n\n🌟 What is CIDC? \nCIDC Battle is 3vs3 freestyle battle \n\n🌟 What do I get if I win qualifier? \nYou and your team get a flight to Korea and hotel covered by event organisers.\n\n🌟 How do I sign up? \nGet tickets in the link in the bio and sign your team at the event’s door.\n\nGet your ticket now 🎟 \n\nEventbrite $30 / $25\nAt door $35 / $30\n\nLet’s go Vancouver! Show em how it’s done 😎"
     }
   ]
 }
